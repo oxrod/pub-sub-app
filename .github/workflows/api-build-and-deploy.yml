@@ -40,7 +40,7 @@ jobs:
 
       - name: dotnet bundle migration
         working-directory: ${{env.PROJECT_FOLDER}}
-        run: dotnet ef migrations bundle --runtime linux-x64 -p ${{env.PROJECT_NAME}}.csproj -o ${{env.PROJECT_FOLDER}}/myapp/migrate
+        run: dotnet ef migrations bundle --runtime linux-x64 -p ${{env.PROJECT_NAME}}.csproj -o myapp/migrate
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
