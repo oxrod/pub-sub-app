@@ -15,6 +15,7 @@ spec:
       labels:
         io.kompose.service: api
     spec:
+      automountServiceAccountToken: false
       initContainers:
         - name: wait-for-mssql
           image: busybox
