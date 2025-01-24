@@ -36,7 +36,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Run tests with dotnet
-        working-directory: ${{env.PROJECT_FOLDER}}.Tests
+        working-directory: ${{env.PROJECT_FOLDER}}
         run: dotnet test --configuration Release --no-build --verbosity detailed --logger "trx;LogFileName=TestResults.trx"
 
       - name: dotnet publish
