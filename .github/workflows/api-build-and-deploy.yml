@@ -37,7 +37,7 @@ jobs:
 
       - name: Run tests with dotnet
         working-directory: ${{env.PROJECT_FOLDER}}.Tests
-        run: dotnet test ./RabbitMqProductAPI.Tests/RabbitMqProductAPI.Tests.csproj --configuration Release --no-build --logger "trx;LogFileName=TestResults.trx"
+        run: dotnet test --configuration Release --no-build --verbosity detailed --logger "trx;LogFileName=TestResults.trx"
 
       - name: dotnet publish
         working-directory: ${{env.PROJECT_FOLDER}}
